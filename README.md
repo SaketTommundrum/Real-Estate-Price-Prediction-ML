@@ -135,3 +135,5 @@ Feel free to fork this project and submit pull requests for any improvements.
 ## 📄 License
 
 This project is open source and available under the MIT License.
+<img width="498" height="924" alt="image" src="https://github.com/user-attachments/assets/0815a9bd-a956-4e0d-a0b1-f25169fd59f5" />
+
