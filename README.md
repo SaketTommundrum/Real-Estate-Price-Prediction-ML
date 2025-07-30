@@ -1,47 +1,137 @@
 # Real-Estate-Price-Prediction-ML
 
-🏡 Real Estate Price Prediction
-This project uses machine learning techniques to predict real estate prices based on various housing features. It includes data cleaning, exploratory analysis, feature engineering, and model training to forecast housing prices with improved accuracy.
+🏡 **Bangalore House Price Prediction Web Application**
 
-📌 Overview
-The notebook walks through:
+This project uses machine learning techniques to predict house prices in Bangalore based on various housing features. It includes data cleaning, exploratory analysis, feature engineering, model training, and a complete web application for real-time price predictions.
 
-1. Data preprocessing and cleaning
+## 📌 Overview
 
-2. Exploratory data analysis (EDA) using visualizations
+The project consists of:
 
-3. Feature selection and engineering
+1. **Data Analysis & Model Training** - Jupyter notebook with complete ML pipeline
+2. **Web Application** - Flask-based website for price predictions
+3. **Machine Learning Model** - Trained Linear Regression model with feature engineering
 
-4. Model training using supervised regression algorithms
+## 🌐 Web Application Features
 
-5. Evaluation using metrics like RMSE and R²
+- **Interactive Web Interface** - Modern, responsive design
+- **Real-time Predictions** - Get instant price estimates
+- **Location Dropdown** - Select from available Bangalore locations
+- **Input Validation** - Ensures data quality for predictions
+- **Mobile Friendly** - Works on all devices
 
-⚙️ Tech Stack
-1. Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)
+## ⚙️ Tech Stack
 
-2. Jupyter Notebook
+**Backend:**
 
-3. Machine Learning: Linear Regression, Ridge, Lasso, etc.
+- Python (Flask, Pandas, NumPy, Scikit-learn)
+- Machine Learning: Linear Regression with feature engineering
 
-📈 Dataset
-The dataset used is a publicly available housing dataset containing attributes such as:
+**Frontend:**
 
-1. Number of bedrooms and bathrooms
+- HTML5, CSS3, JavaScript
+- jQuery for AJAX requests
+- Responsive design
 
-2. Living area (sqft)
+**Data Processing:**
 
-3. Location, condition, and construction year
+- Jupyter Notebook
+- Matplotlib, Seaborn for visualizations
 
-4. Price
+## 📈 Dataset
 
-🚀 Results
-The final model was evaluated using RMSE and R² score. The pipeline was optimized for improved accuracy and reduced overfitting. Feature engineering and regularization significantly enhanced performance.
+The dataset is sourced from Kaggle: **[Bengaluru House Price Data](https://www.kaggle.com/datasets/amitabhajoy/bengaluru-house-price-data)**
 
-📌 How to Run
+**Dataset Features:**
+
+- **Location** - Area/locality in Bangalore
+- **Size** - Number of BHK (bedrooms)
+- **Total Square Feet** - Total area of the property
+- **Bath** - Number of bathrooms
+- **Price** - Property price in lakhs (target variable)
+
+**Data Processing Steps:**
+
+1. Data cleaning and handling missing values
+2. Feature engineering (price per sqft, location grouping)
+3. Outlier removal using statistical methods
+4. One-hot encoding for categorical variables
+
+## 🚀 How to Run
+
+### Prerequisites
+
+```bash
+pip install Flask numpy scikit-learn pandas
+```
+
+### Running the Web Application
+
 1. Clone the repository
+2. Navigate to the project directory
+3. Run the Flask app:
+   ```bash
+   python app.py
+   ```
+4. Open your browser and go to `http://127.0.0.1:5000`
 
-2. Open the notebook in Jupyter Lab/Notebook
+### Running the Jupyter Notebook
 
-3. Install required packages if needed
+1. Open `House Sales Prediction.ipynb` in Jupyter Lab/Notebook
+2. Install required packages if needed
+3. Run all cells to reproduce the analysis and train the model
 
-4. Run all cells to reproduce the analysis
+## 📁 Project Structure
+
+```
+Real-Estate-Price-Prediction-ML/
+├── House Sales Prediction.ipynb    # Main analysis notebook
+├── app.py                          # Flask web application
+├── templates/
+│   └── index.html                  # Web interface
+├── banglore_home_prices_model.pickle # Trained model (auto-generated)
+├── columns.json                    # Model features (auto-generated)
+├── Bengaluru_House_Data.csv       # Dataset (download from Kaggle)
+├── requirements.txt                # Python dependencies
+└── README.md                       # This file
+```
+
+## 🎯 Model Performance
+
+The final Linear Regression model was selected after comparing multiple algorithms:
+
+- **Linear Regression** - Best performing model
+- **Lasso Regression** - Alternative with regularization
+- **Decision Tree** - Tree-based approach
+
+The model includes sophisticated feature engineering:
+
+- Price per square feet outlier removal
+- Location-based statistical filtering
+- Bathroom to bedroom ratio validation
+
+## 🌟 Key Features
+
+- **Data Quality**: Comprehensive data cleaning and outlier removal
+- **Feature Engineering**: Smart location grouping and derived features
+- **Model Selection**: Grid search with cross-validation
+- **Web Interface**: User-friendly prediction interface
+- **Error Handling**: Robust error handling in both model and web app
+
+## 📊 Usage Example
+
+**Web Application:**
+
+1. Select location (e.g., "Whitefield", "Koramangala")
+2. Enter total square feet (e.g., 1200)
+3. Choose BHK (e.g., 2 BHK)
+4. Select bathrooms (e.g., 2)
+5. Click "Predict Price" to get estimate in lakhs
+
+## 🤝 Contributing
+
+Feel free to fork this project and submit pull requests for any improvements.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
