@@ -314,7 +314,11 @@
                 contentType: false,
                 success: function(response) {
                     $('#loading').hide();
-                    $('#predicted_price').text('₹ ' + response.estimated_price + ' Lakhs');
+                    if (response.estimated_price === "Not Available") {
+                        $('#predicted_price').text('Not Available');
+                    } else {
+                        $('#predicted_price').text('₹ ' + response.estimated_price + ' Lakhs');
+                    }
                     $('#result').addClass('show');
                 },
                 error: function() {
